@@ -1,0 +1,52 @@
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+@import "tailwindcss";
+
+:root {
+  /* Brand colors adjusted to reference (warm orange theme) */
+  --brand-primary: #f97316; /* orange-500 */
+  --brand-primary-dark: #ea580c; /* orange-600 */
+  --brand-secondary: #f59e0b; /* amber-500 */
+}
+
+/* App-wide base styles */
+html, body, #root {
+  height: 100%;
+}
+body {
+  @apply antialiased text-zinc-900 bg-white;
+}
+
+/* Subheading style: orange title with dotted rule to the right */
+@layer components {
+  /* Reduced horizontal padding container */
+  .inner {
+    padding-left: 0.75rem; /* px-3 */
+    padding-right: 0.75rem;
+  }
+  @media (min-width: 640px) {
+    .inner {
+      padding-left: 1rem; /* px-4 -> reduced from px-6 */
+      padding-right: 1rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .inner {
+      padding-left: 1.5rem; /* px-6 -> reduced from px-8 */
+      padding-right: 1.5rem;
+    }
+  }
+  .subheading {
+    @apply text-zinc-900 font-semibold; /* base for good rendering */
+    color: var(--brand-primary);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .subheading::after {
+    content: '';
+    flex: 1 1 auto;
+    border-top: 1px dashed currentColor;
+    opacity: 0.6;
+  }
+}
