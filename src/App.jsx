@@ -387,8 +387,8 @@ function App() {
           <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900">Ready to get started?</h2>
           <p className="mt-3 text-zinc-600">Insert your closing CTA line from the PDF.</p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="#" className="inline-flex items-center justify-center rounded-md bg-[var(--brand-primary)] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[var(--brand-primary-dark)]">Create account</a>
-            <a href="#" className="inline-flex items-center justify-center rounded-md border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-700 hover:bg-zinc-50">Book a demo</a>
+            <a href="#" className="inline-flex items-center justify-center rounded-md bg-[var(--brand-primary)] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[var(--brand-primary-dark)]">Create Account</a>
+            <a href="#" className="inline-flex items-center justify-center rounded-md border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-700 hover:bg-zinc-50">Book a Demo</a>
           </div>
         </div>
       </section>
@@ -408,7 +408,7 @@ function App() {
             </div>
             <div>
               <h4 className="text-sm font-semibold text-zinc-900">Our Policies</h4>
-              <ul className="mt-3 space-y-2 text-sm text-zinc-700">
+              <ul className="mt-3 space-y-3 text-sm text-zinc-700">
                 <li><a className="hover:text-zinc-900" href="#footer">Privacy Policy</a></li>
                 <li><a className="hover:text-zinc-900" href="#footer">Editorial Policy</a></li>
                 <li><a className="hover:text-zinc-900" href="#footer">Refund Policy</a></li>
@@ -441,7 +441,7 @@ function App() {
             </div>
           </div>
           <div className="mt-10 border-t border-zinc-200 pt-6 text-xs text-zinc-600 flex flex-col sm:flex-row items-center justify-between gap-3">
-            <span>© {new Date().getFullYear()} YourBrand. All Rights Reserved.</span>
+            <span>© {new Date().getFullYear()} Your Brand. All Rights Reserved.</span>
             <div className="flex items-center gap-4 text-zinc-500">
               <a href="https://facebook.com/easyadvising" target="_blank" rel="noreferrer" aria-label="Facebook" className="hover:text-zinc-700">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5"><path d="M22 12a10 10 0 10-11.5 9.95v-7.04H7.9V12h2.6V9.8c0-2.57 1.53-3.99 3.88-3.99 1.12 0 2.29.2 2.29.2v2.52h-1.29c-1.27 0-1.66.79-1.66 1.6V12h2.83l-.45 2.91h-2.38v7.04A10 10 0 0022 12z"/></svg>
