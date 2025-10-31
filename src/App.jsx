@@ -2,38 +2,39 @@ import Slider from 'react-slick'
 import { useRef } from 'react'
 import CategoryCard from './components/CategoryCard.jsx'
 import TestimonialCard from './components/TestimonialCard.jsx'
+import Logo from './components/Logo.jsx'
 function App() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-30 bg-white/95 backdrop-blur border-b border-zinc-100">
+      <header className="fixed top-0 left-0 right-0 z-30 border-b border-zinc-100 bg-gradient-to-r from-[var(--ui-gradient-start)] to-[var(--ui-gradient-end)] text-white">
         <div className="mx-auto max-w-7xl inner h-16 flex items-center gap-4">
           {/* Logo */}
           <div className="flex items-center gap-2 shrink-0">
-            <div className="h-8 w-8 rounded bg-gradient-to-br from-[var(--brand-primary)] to-[var(--brand-secondary)]" />
-            <span className="text-lg font-semibold text-zinc-900">Easy Advising</span>
+            <Logo size={32} />
+            <span className="text-lg font-semibold">Easy Advising</span>
           </div>
           {/* Search */}
           <div className="hidden md:flex grow">
             <div className="relative w-full">
-              <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400">
+              <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-white/80">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5"><path d="M10 2a8 8 0 015.292 13.708l4 4a1 1 0 11-1.414 1.414l-4-4A8 8 0 1110 2zm0 2a6 6 0 100 12 6 6 0 000-12z"/></svg>
               </span>
-              <input className="w-full rounded-full border border-zinc-200 bg-white px-10 py-2 text-sm text-zinc-900 placeholder:text-zinc-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)]" placeholder="Search experts, topics..." />
+              <input className="w-full rounded-full border border-white/40 bg-white/90 px-10 py-2 text-sm text-zinc-900 placeholder:text-zinc-500 shadow-sm focus:outline-none focus:ring-2 focus:ring-white/60" placeholder="Search experts, topics..." />
             </div>
           </div>
           {/* CTA buttons */}
           <div className="ml-auto flex items-center gap-3">
-            <a href="#" className="hidden sm:inline-flex items-center gap-2 rounded-full border border-[var(--brand-primary)]/30 bg-[color-mix(in_oklab,var(--brand-primary)_10%,white)] px-4 py-2 text-sm font-semibold text-[var(--brand-primary)] hover:bg-[color-mix(in_oklab,var(--brand-primary)_16%,white)]">
+            <a href="#" className="btn-primary hidden sm:inline-flex">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4"><path d="M16.365 1.43c.42-.49 1.07-.82 1.71-.89.08.64-.17 1.3-.59 1.78-.42.5-1.1.86-1.75.8-.07-.62.2-1.28.63-1.7zM12.5 5.2c1.13 0 2.4-.78 3.22-.78.78 0 1.95.74 2.7.74.04 0 .07 0 .1-.01-.26.8-.8 1.53-1.38 2.12-.64.67-1.35 1.35-2.29 1.35-.92 0-1.22-.44-2.22-.44-1.03 0-1.46.43-2.31.43-.96 0-1.73-.79-2.37-1.47-1.28-1.36-2.27-3.43-1.89-5.37.99.04 1.83.67 2.41.67.86 0 1.77-.6 2.83-.6.86 0 1.6.36 2.2.96-.03.06-.04.12-.04.18 0 .07.01.15.04.21z"/></svg>
               <span>Download App</span>
             </a>
-            <a href="#" className="inline-flex items-center gap-2 rounded-full border border-zinc-200 px-4 py-2 text-sm font-semibold text-zinc-800 hover:bg-zinc-50">
+            <a href="#" className="btn-primary inline-flex items-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zm-7 9a7 7 0 0114 0 1 1 0 01-1 1H6a1 1 0 01-1-1z"/></svg>
               <span>Login</span>
             </a>
-            <button className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-zinc-200 hover:bg-zinc-50">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 text-zinc-700"><path d="M4 6h16a1 1 0 100-2H4a1 1 0 100 2zm16 5H4a1 1 0 100 2h16a1 1 0 100-2zm0 7H4a1 1 0 100 2h16a1 1 0 100-2z"/></svg>
+            <button className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/40 hover:bg-white/15">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5"><path d="M4 6h16a1 1 0 100-2H4a1 1 0 100 2zm16 5H4a1 1 0 100 2h16a1 1 0 100-2zm0 7H4a1 1 0 100 2h16a1 1 0 100-2z"/></svg>
             </button>
           </div>
         </div>
@@ -49,28 +50,38 @@ function App() {
                 Trusted Second Opinions
               </div>
               <h1 className="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight text-zinc-900">
-                Verified Experts. <span className="text-[var(--brand-primary)]">Real Talk.</span> Trusted Second Opinions.
+                Verified Experts. <span className="text-[#362695]">Real Talk.</span> Trusted Second Opinions.
               </h1>
               <p className="mt-4 text-lg text-zinc-600">
                 Connect instantly with verified experts for unbiased second opinions on health, legal, career, finance, and more—via chat, audio, or video.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-3">
-                <a href="#" className="inline-flex items-center justify-center rounded-md bg-[var(--brand-primary)] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[var(--brand-primary-dark)]">Download Easy Advising App</a>
-                <a href="#browse" className="inline-flex items-center justify-center rounded-md border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-700 hover:bg-zinc-50">Browse categories</a>
+                <a href="#" className="btn-primary">Download Easy Advising App</a>
+                <a href="#browse" className="btn-primary">Browse categories</a>
               </div>
               <div className="mt-4 flex flex-col sm:flex-row gap-3">
-                <a href="#" className="inline-flex items-center justify-center rounded-md border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-50">Android (Play Store)</a>
-                <a href="#" className="inline-flex items-center justify-center rounded-md border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-50">iOS (App Store)</a>
+                <a href="#" className="btn-primary px-4 py-2">Android (Play Store)</a>
+                <a href="#" className="btn-primary px-4 py-2">iOS (App Store)</a>
               </div>
             </div>
             <div className="relative">
               <div className="pointer-events-none absolute -top-6 -left-6 h-40 w-40 rounded-full bg-[var(--brand-primary)]/30 blur-2xl" />
-              <img
-                src="https://images.unsplash.com/photo-1521790361543-f645cf042ec4?q=80&w=1280&auto=format&fit=crop"
-                alt="Advising app preview"
-                loading="lazy"
-                className="aspect-[4/3] w-full rounded-2xl border border-zinc-200 object-cover shadow-lg"
-              />
+              <div className="relative mx-auto max-w-xl sm:max-w-2xl overflow-hidden rounded-2xl border border-zinc-200 bg-white/80 shadow-lg backdrop-blur h-72 sm:h-96 lg:h-[28rem]">
+                {/** Old screenshot kept for reference
+                <img
+                  src="/asset/image1.png"
+                  alt="Advising app preview"
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover object-top"
+                />
+                */}
+                <img
+                  src="/asset/image2.png"
+                  alt="Advising app preview (Figma export)"
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover object-top"
+                />
+              </div>
               <div className="pointer-events-none absolute -bottom-6 -right-6 h-40 w-40 rounded-full bg-[var(--brand-secondary)]/30 blur-2xl" />
             </div>
           </div>
@@ -282,10 +293,10 @@ function App() {
           <h2 className="text-3xl subheading">Want to Become an Advisor?</h2>
           <p className="mt-3 text-sm text-zinc-700">If you're a working professional and want to share your knowledge, join us!</p>
           <div className="mt-6 flex flex-col sm:flex-row gap-3">
-            <a href="#" className="inline-flex items-center justify-center rounded-md bg-[var(--brand-primary)] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[var(--brand-primary-dark)]">Download the Easy Advising – Advisor App</a>
+            <a href="#" className="btn-primary">Download the Easy Advising – Advisor App</a>
             <div className="flex gap-3">
-              <a href="#" className="inline-flex items-center justify-center rounded-md border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-50">Android (Play Store)</a>
-              <a href="#" className="inline-flex items-center justify-center rounded-md border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-50">iOS (App Store)</a>
+              <a href="#" className="btn-primary px-4 py-2">Android (Play Store)</a>
+              <a href="#" className="btn-primary px-4 py-2">iOS (App Store)</a>
             </div>
           </div>
         </div>
@@ -387,14 +398,14 @@ function App() {
           <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900">Ready to get started?</h2>
           <p className="mt-3 text-zinc-600">Insert your closing CTA line from the PDF.</p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="#" className="inline-flex items-center justify-center rounded-md bg-[var(--brand-primary)] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[var(--brand-primary-dark)]">Create Account</a>
-            <a href="#" className="inline-flex items-center justify-center rounded-md border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-700 hover:bg-zinc-50">Book a Demo</a>
+            <a href="#" className="btn-primary">Create Account</a>
+            <a href="#" className="btn-primary">Book a Demo</a>
           </div>
         </div>
       </section>
 
       {/* Footer (light, column layout like reference) */}
-      <footer id="footer" className="mt-auto bg-white border-t border-zinc-200">
+      <footer id="footer" className="mt-auto border-t border-zinc-200 bg-gradient-to-r from-[var(--ui-gradient-start)] to-[var(--ui-gradient-end)] text-white">
         <div className="mx-auto max-w-7xl inner py-14">
           <div className="grid gap-10 md:grid-cols-4">
             <div>
@@ -407,28 +418,28 @@ function App() {
               </ul>
             </div>
             <div>
-              <h4 className="text-sm font-semibold text-zinc-900">Our Policies</h4>
-              <ul className="mt-3 space-y-3 text-sm text-zinc-700">
-                <li><a className="hover:text-zinc-900" href="#footer">Privacy Policy</a></li>
-                <li><a className="hover:text-zinc-900" href="#footer">Editorial Policy</a></li>
-                <li><a className="hover:text-zinc-900" href="#footer">Refund Policy</a></li>
-                <li><a className="hover:text-zinc-900" href="#footer">Grievance Redressal Policy</a></li>
+              <h4 className="text-sm font-semibold">Our Policies</h4>
+              <ul className="mt-3 space-y-3 text-sm text-white/80">
+                <li><a className="hover:text-white" href="#footer">Privacy Policy</a></li>
+                <li><a className="hover:text-white" href="#footer">Editorial Policy</a></li>
+                <li><a className="hover:text-white" href="#footer">Refund Policy</a></li>
+                <li><a className="hover:text-white" href="#footer">Grievance Redressal Policy</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="text-sm font-semibold text-zinc-900">Other</h4>
-              <ul className="mt-3 space-y-2 text-sm text-zinc-700">
-                <li><a className="hover:text-zinc-900" href="#footer">Terms and Conditions</a></li>
+              <h4 className="text-sm font-semibold">Other</h4>
+              <ul className="mt-3 space-y-2 text-sm text-white/80">
+                <li><a className="hover:text-white" href="#footer">Terms and Conditions</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="text-sm font-semibold text-zinc-900">Subscribe Us for Best Deals</h4>
+              <h4 className="text-sm font-semibold">Subscribe Us for Best Deals</h4>
               <form className="mt-3 flex gap-2" onSubmit={(e) => e.preventDefault()}>
-                <input className="w-full rounded-md border border-zinc-300 px-3 py-2 text-sm text-zinc-900 placeholder:text-zinc-400 shadow-sm" placeholder="Enter Email" />
-                <button className="inline-flex items-center rounded-md bg-[var(--brand-primary)] px-4 py-2 text-sm font-semibold text-white shadow hover:bg-[var(--brand-primary-dark)]">Submit</button>
+                <input className="w-full rounded-md border border-white/30 bg-white/10 px-3 py-2 text-sm text-white placeholder:text-white/70 shadow-sm" placeholder="Enter Email" />
+                <button className="inline-flex items-center rounded-md bg-white/20 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-white/30">Submit</button>
               </form>
               <div className="mt-5">
-                <h5 className="text-sm font-semibold text-zinc-900">Download App</h5>
+                <h5 className="text-sm font-semibold">Download App</h5>
                 <div className="mt-3 flex items-center gap-3">
                   <a href="#" target="_blank" rel="noreferrer">
                     <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" className="h-10" />
@@ -440,19 +451,19 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="mt-10 border-t border-zinc-200 pt-6 text-xs text-zinc-600 flex flex-col sm:flex-row items-center justify-between gap-3">
-            <span>© {new Date().getFullYear()} Your Brand. All Rights Reserved.</span>
-            <div className="flex items-center gap-4 text-zinc-500">
-              <a href="https://facebook.com/easyadvising" target="_blank" rel="noreferrer" aria-label="Facebook" className="hover:text-zinc-700">
+          <div className="mt-10 border-t border-white/20 pt-6 text-xs text-white/80 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <span>© {new Date().getFullYear()} YourBrand. All Rights Reserved.</span>
+            <div className="flex items-center gap-4">
+              <a href="https://facebook.com/easyadvising" target="_blank" rel="noreferrer" aria-label="Facebook" className="hover:text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5"><path d="M22 12a10 10 0 10-11.5 9.95v-7.04H7.9V12h2.6V9.8c0-2.57 1.53-3.99 3.88-3.99 1.12 0 2.29.2 2.29.2v2.52h-1.29c-1.27 0-1.66.79-1.66 1.6V12h2.83l-.45 2.91h-2.38v7.04A10 10 0 0022 12z"/></svg>
               </a>
-              <a href="https://x.com/easyadvising" target="_blank" rel="noreferrer" aria-label="X" className="hover:text-zinc-700">
+              <a href="https://x.com/easyadvising" target="_blank" rel="noreferrer" aria-label="X" className="hover:text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5"><path d="M18.244 3H21l-6.52 7.457L22 21h-6.172l-4.82-5.59L5.5 21H3l7.02-8.03L2 3h6.328l4.36 5.036L18.244 3zm-1.08 16h1.19L7.91 5H6.68l10.484 14z"/></svg>
               </a>
-              <a href="https://instagram.com/easyadvising" target="_blank" rel="noreferrer" aria-label="Instagram" className="hover:text-zinc-700">
+              <a href="https://instagram.com/easyadvising" target="_blank" rel="noreferrer" aria-label="Instagram" className="hover:text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3zm5 2a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.5-.75a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z"/></svg>
               </a>
-              <a href="https://youtube.com/easyadvising" target="_blank" rel="noreferrer" aria-label="YouTube" className="hover:text-zinc-700">
+              <a href="https://youtube.com/easyadvising" target="_blank" rel="noreferrer" aria-label="YouTube" className="hover:text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5"><path d="M23.498 6.186a3.003 3.003 0 00-2.116-2.123C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.382.563A3.003 3.003 0 00.502 6.186C0 8.036 0 12 0 12s0 3.964.502 5.814a3.003 3.003 0 002.116 2.123C4.46 20.5 12 20.5 12 20.5s7.54 0 9.382-.563a3.003 3.003 0 002.116-2.123C24 15.964 24 12 24 12s0-3.964-.502-5.814zM9.75 15.5v-7l6 3.5-6 3.5z"/></svg>
               </a>
             </div>

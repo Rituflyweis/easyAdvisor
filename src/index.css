@@ -7,6 +7,10 @@
   --brand-primary: #f97316; /* orange-500 */
   --brand-primary-dark: #ea580c; /* orange-600 */
   --brand-secondary: #f59e0b; /* amber-500 */
+  /* App UI gradient (from Figma screenshot) */
+  --ui-gradient-start: #6d28d9; /* violet-700 */
+  --ui-gradient-end: #be185d;   /* rose-700 */
+  --ui-surface: #1f2937;        /* zinc-800 for icons on gradient */
 }
 
 /* App-wide base styles */
@@ -38,7 +42,7 @@ body {
   }
   .subheading {
     @apply text-zinc-900 font-semibold; /* base for good rendering */
-    color: var(--brand-primary);
+    color: #111827; /* set to near-black per theme */
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -48,5 +52,38 @@ body {
     flex: 1 1 auto;
     border-top: 1px dashed currentColor;
     opacity: 0.6;
+  }
+
+  /* Gradient heading (Figma look) */
+  .heading-gradient {
+    background-image: linear-gradient(90deg, var(--ui-gradient-start), var(--ui-gradient-end));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Card base polish */
+  .ea-card {
+    @apply rounded-2xl border border-zinc-200 bg-white shadow-sm transition;
+  }
+  .ea-card:hover {
+    @apply -translate-y-0.5 shadow-md;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  }
+  .ea-card-ring:hover {
+    box-shadow: 0 0 0 2px color-mix(in oklab, var(--ui-gradient-end) 35%, transparent);
+  }
+
+  /* Themed buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md px-6 py-3 text-sm font-semibold text-white shadow-sm;
+    background-image: linear-gradient(90deg, #C82D30 1.89%, #362695 67.23%, #B12F31 136.79%);
+  }
+  .btn-primary:hover {
+    filter: brightness(1.05);
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-md border px-6 py-3 text-sm font-semibold text-zinc-700 hover:bg-zinc-50;
+    border-color: color-mix(in oklab, var(--ui-gradient-start) 45%, #e5e7eb);
   }
 }

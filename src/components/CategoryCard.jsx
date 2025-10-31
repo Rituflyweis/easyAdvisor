@@ -1,7 +1,7 @@
 export default function CategoryCard({ title, imageSrc, imageAlt, children }) {
   return (
-    <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
-      <h3 className="text-xl font-semibold text-zinc-900">{title}</h3>
+    <div className="ea-card ea-card-ring p-6">
+      <h3 className="text-xl font-semibold heading-gradient">{title}</h3>
       {imageSrc ? (
         <img
           src={imageSrc}
