@@ -328,9 +328,9 @@ export default function Home({ onNavigate }) {
               ],
             }
             const reviews = [
-              { name: 'Riya', role: 'Career Change', rating: 5, text: 'I got real-time advice from a top career coach. It changed my life!', avatar: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=256&auto=format&fit=crop' },
-              { name: 'Aman', role: 'Nutrition Session', rating: 5, text: 'Had a great session with a nutritionist. Very practical and helpful!', avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=256&auto=format&fit=crop' },
-              { name: 'Sneha', role: 'Wellness', rating: 4, text: 'Loved the personal touch. No bots, only real people!', avatar: 'https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=256&auto=format&fit=crop' },
+              { name: 'Riya', role: 'Career Change', rating: 5, text: 'I got real-time advice from a top career coach. It changed my life!', avatar: 'https://static.vecteezy.com/system/resources/previews/031/725/956/large_2x/ai-generated-studio-portrait-of-handsome-indian-man-on-colour-background-photo.jpg' },
+              { name: 'Aman', role: 'Nutrition Session', rating: 5, text: 'Had a great session with a nutritionist. Very practical and helpful!', avatar: 'https://as1.ftcdn.net/v2/jpg/03/65/85/20/1000_F_365852057_mV52iIJS1xtbyGXvJpYT4YhOQejWdnrF.jpg' },
+              { name: 'Sneha', role: 'Wellness', rating: 4, text: 'Loved the personal touch. No bots, only real people!', avatar: 'https://static.vecteezy.com/system/resources/previews/031/719/847/large_2x/ai-generated-studio-portrait-of-handsome-indian-man-on-colour-background-photo.jpg' },
             ]
             return (
               <div className="mt-6">
@@ -411,7 +411,7 @@ export default function Home({ onNavigate }) {
               <ul className="mt-3 space-y-3 text-sm text-white/80">
                 <li><Link className="hover:text-white" to="/privacy">Privacy Policy</Link></li>
                 <li><Link className="hover:text-white" to="/refund">Refund Policy</Link></li>
-                <li><Link className="hover:text-white" to="/terms">Terms and Conditions</Link></li>
+               
               </ul>
             </div>
             <div>
