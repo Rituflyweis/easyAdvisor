@@ -54,7 +54,7 @@ export default function Home({ onNavigate }) {
                 Trusted Advice
               </div>
               <h1 className="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight text-zinc-900">
-                Verified Experts. <span className="text-[#362695]">Real Talk.</span> Trusted Second Opinions.
+                Verified Experts. <span className="text-[#362695]">Real Talk.</span> Trusted Advice.
               </h1>
               <p className="mt-4 text-lg text-zinc-600">
                Get expert consultation from verified professionals on health, legal, career, finance, and more - anytime, through chat, Audio call or Video call.
@@ -328,9 +328,9 @@ export default function Home({ onNavigate }) {
               ],
             }
             const reviews = [
-              { name: 'Riya', role: 'Career Change', rating: 5, text: 'I got real-time advice from a top career coach. It changed my life!', avatar: 'https://static.vecteezy.com/system/resources/previews/031/725/956/large_2x/ai-generated-studio-portrait-of-handsome-indian-man-on-colour-background-photo.jpg' },
-              { name: 'Aman', role: 'Nutrition Session', rating: 5, text: 'Had a great session with a nutritionist. Very practical and helpful!', avatar: 'https://as1.ftcdn.net/v2/jpg/03/65/85/20/1000_F_365852057_mV52iIJS1xtbyGXvJpYT4YhOQejWdnrF.jpg' },
-              { name: 'Sneha', role: 'Wellness', rating: 4, text: 'Loved the personal touch. No bots, only real people!', avatar: 'https://static.vecteezy.com/system/resources/previews/031/719/847/large_2x/ai-generated-studio-portrait-of-handsome-indian-man-on-colour-background-photo.jpg' },
+              { name: 'Aman', role: 'Career Change', rating: 5, text: 'I got real-time advice from a top career coach. It changed my life!', avatar: 'https://static.vecteezy.com/system/resources/previews/031/725/956/large_2x/ai-generated-studio-portrait-of-handsome-indian-man-on-colour-background-photo.jpg' },
+              { name: 'Riya', role: 'Nutrition Session', rating: 5, text: 'Had a great session with a nutritionist. Very practical and helpful!', avatar: 'https://as1.ftcdn.net/v2/jpg/03/65/85/20/1000_F_365852057_mV52iIJS1xtbyGXvJpYT4YhOQejWdnrF.jpg' },
+              { name: 'Subham', role: 'Wellness', rating: 4, text: 'Loved the personal touch. No bots, only real people!', avatar: 'https://static.vecteezy.com/system/resources/previews/031/719/847/large_2x/ai-generated-studio-portrait-of-handsome-indian-man-on-colour-background-photo.jpg' },
             ]
             return (
               <div className="mt-6">
